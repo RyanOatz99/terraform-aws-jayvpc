@@ -1,0 +1,48 @@
+variable "aws_vpc_name" {
+  description = "The name of the VPC specified as argument to this module"
+  type        = string
+  default     = "vpc"
+}
+
+variable "aws_vpc_cidr" {
+  description = "The CIDR block for the VPC. Default value is a valid CIDR, but not acceptable by AWS and should be overridden."
+  type        = string
+  default     = "10.0.0.0/16"
+}
+
+variable "aws_vpc_azs" {
+  description = "A list of availability zones names or ids in the region"
+  type        = string
+  default     ="ap-south-1a"
+}
+
+variable "aws_vpc_private_subnet" {
+  description = "The range of private subnet to your vpc."
+  type        = list(string)
+    default     = ["10.0.1.0/24"]
+}
+
+variable "aws_vpc_public_subnet" {
+  description = "The range of public subnet to your vpc."
+  type        = list(string)
+  default     = ["10.0.2.0/24"]
+}
+
+variable "aws_vpc_enable_nat_gateway" {
+  description = "Available zone for the vpc."
+  type        = bool
+  default     ="false"
+}
+
+variable "aws_vpc_enable_vpn_gateway" {
+  description = "Available zone for the vpc."
+  type        = bool
+  default     ="false"
+}
+
+variable "aws_vpc_instance_tenancy" {
+  description = "Available zone for the vpc."
+  type        = string
+  default     ="default"
+}
+

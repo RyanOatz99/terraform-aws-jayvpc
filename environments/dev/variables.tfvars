@@ -1,0 +1,12 @@
+aws_vpc_name                          = "my_vpc"
+aws_vpc_cidr                          = "10.0.0.0/16"
+aws_vpc_azs                           = "ap-south-1a"
+aws_vpc_public_subnet                 = ["10.0.1.0/24"]
+aws_vpc_private_subnet                = ["10.0.2.0/24"]
+aws_vpc_enable_nat_gateway            = "true"
+aws_vpc_enable_vpn_gateway            = "false"
+enable_dns_support                    = "false"
+enable_dns_hostnames                  = "false"
+enable_classiclink                    = "false"
+enable_classiclink_dns_support        = "false"
+instance_tenancy                      = "default"
